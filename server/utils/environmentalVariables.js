@@ -46,7 +46,7 @@ if (ENV === 'production') {
 }
 
 if (ENV === 'production') {
-    portNo = process.env.PORT || 3000;
+    portNo = process.env.PORT || 9000;
 }
 else {
     portNo = process.env.PORT || 9000;
