@@ -7,7 +7,7 @@
     "server": "npm run server --prefix server",
     "client": "npm run dev --prefix client",
     "build": "npm run build --prefix client",
-    "deploy": "npm install --prefix server && npm run build --prefix client",
+    "deploy": "npm install --prefix server && npm install --prefix client && npm run build --prefix client && npm run server",
     "heroku-postbuild": "npm run build"
   },
   "devDependencies": {
