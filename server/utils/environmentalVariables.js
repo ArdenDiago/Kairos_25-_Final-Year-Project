@@ -1,5 +1,5 @@
 require('dotenv').config();
-let client_ID, client_Secret, COOKIE_KEY_1, COOKIE_KEY_2, MongoURI, Razorpay_key, Razorpay_secret, domainName, encryptedSecretKey;
+let client_ID, client_Secret, COOKIE_KEY_1, COOKIE_KEY_2, MongoURI, Razorpay_key, Razorpay_secret, domainName, encryptedSecretKey,  portNo;
 
 const ENV = process.env.NODE_ENV || 'dev';
 
@@ -45,6 +45,13 @@ if (ENV === 'production') {
     domainName = 'http://localhost:5173';
 }
 
+if (ENV === 'production') {
+    portNo = process.env.PORT || 3000;
+}
+else {
+    portNo = process.env.PORT || 9000;
+}
+
 module.exports = {
     client_ID,
     client_Secret,
@@ -55,4 +62,5 @@ module.exports = {
     Razorpay_secret,
     domainName,
     encryptedSecretKey,
+    portNo,
 };

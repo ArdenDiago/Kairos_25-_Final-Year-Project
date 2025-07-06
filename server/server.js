@@ -5,7 +5,7 @@ const helmet = require('helmet');
 const cors = require('cors');
 const morgan = require('morgan');
 const listEndpoints = require('express-list-endpoints');
-const { domainName } = require('./utils/environmentalVariables');
+const { domainName, portNo } = require('./utils/environmentalVariables');
 require("dotenv").config();
 
 // Routers
@@ -25,7 +25,7 @@ const { initializeSocket } = require('./Routs_Model/PhotoBooth/socket');
 
 // Initialize Express App
 const app = express();
-const PORT_NO = 9000;
+const PORT_NO = portNo;
 
 // ✅ Function to Start the Server AFTER startAllProcesses()
 async function startServer() {
