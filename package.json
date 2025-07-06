@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "npm run dev --prefix server",
+    "server": "npm run server --prefix server",
     "client": "npm run dev --prefix client",
     "build": "npm run build --prefix client",
-    "deploy": "npm run build --prefix server",
+    "deploy": "npm install --prefix server && npm run build --prefix client && npm start --prefix server",
     "heroku-postbuild": "npm run build"
   },
   "devDependencies": {

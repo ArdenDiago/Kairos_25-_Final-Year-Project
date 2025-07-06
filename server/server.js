@@ -34,6 +34,10 @@ async function startServer() {
         await startAllProcesses();  // ✅ Ensure this completes before server starts
         console.log("✅ startAllProcesses completed successfully!");
 
+        // Serve static files
+        app.use(express.static(path.join(__dirname, 'public')));
+
+
         // Middleware to remove `/api` prefix from URLs
         app.use((req, res, next) => {
             if (req.url.startsWith('/api/')) {

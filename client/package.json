@@ -6,7 +6,7 @@
   "scripts": {
     "start": "serve -s dist",
     "dev": "vite",
-    "build": "npm install && vite build && rm -rf ../server/public && mkdir -p ../server/public && cp -r dist/* ../server/public/",
+    "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },

@@ -44,7 +44,7 @@
     "server": "NODE_ENV=dev nodemon node server.js",
     "test": "NODE_ENV=test jest --detectOpenHandles",
     "jeet": "cross-env NODE_ENV=dev nodemon node server.js",
-    "deploy": "npm install && npm run frontend:build && npm start"
+    "deploy": "npm install && npm run client:build && npm start"
   },
   "jest": {
     "setupFilesAfterEnv": [
