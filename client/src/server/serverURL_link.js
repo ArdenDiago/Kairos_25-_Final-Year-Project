@@ -3,7 +3,7 @@ const portNo = process.env.PORT || 9000;
 const isProd = import.meta.env.MODE === 'production';
 
 const URL = isProd
-  ? `${import.meta.env.VITE_API_URL}/`
+  ? 'https://kairos25.onrender.com/'
   : `http://localhost:${portNo}/`;
 
 export default URL;
