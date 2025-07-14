@@ -21,7 +21,7 @@ const AuthOptions = {
     clientID: config.CLIENT_ID,
     clientSecret: config.CLIENT_SECRET,
     callbackURL: process.env.NODE_ENV === 'production'
-        ? "https://kairos.spcpegasus.com/api/auth/google/callback"
+        ? "https://kairos25.onrender.com/api/auth/google/callback"
         : "http://localhost:9000/api/auth/google/callback",
     scope: ["profile", "email"],  // ✅ Required scopes
 };
