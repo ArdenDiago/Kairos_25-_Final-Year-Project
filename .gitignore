@@ -1,0 +1,40 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Ignore all nested .git folders (nested git repos)
+**/.git/
+
+# Ignore all nested .github folders
+client/.github/
+server/.github/
+
+# Ignore all .gitignore files everywhere
+client/.gitignore
+server/.gitignore
+
+# Ignore all node_modules folders everywhere
+**/node_modules/
+node_modules/
+**/.env
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+**/Dockerfile
+**/*.yml
