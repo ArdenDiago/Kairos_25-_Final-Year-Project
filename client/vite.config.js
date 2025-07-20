@@ -1,11 +1,13 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
+import removeConsole from 'vite-plugin-remove-console';
 
 export default defineConfig({
   base: '/', // ✅ Ensures correct paths when served via Nginx or any server
   plugins: [
     react(),
+    removeConsole(), // ✅ Removes console logs in production builds
     viteStaticCopy({
       targets: [
         {
