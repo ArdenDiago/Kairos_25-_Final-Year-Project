@@ -45,6 +45,12 @@ async function startServer() {
             }
             next();
         });
+         app.use((req, res, next) => {
+            if (req.url.startsWith('/undefined/')) {
+                req.url = req.url.replace('/undefined', ''); // ✅ Removes only `/api`, keeps the rest
+            }
+            next();
+        });
 
         // Initialize authentication middleware
         initializeAuth(app);
